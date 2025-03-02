@@ -2,27 +2,34 @@ import { FaLocationDot } from 'react-icons/fa6';
 
 const LOCATION = 'Las Vegas';
 
-const projects: { projectName: string }[] = [
-  {
-    projectName: 'The Las Vegas K-9 Foundation',
-  },
+const projects: { projectName: string; year: number }[] = [
   {
     projectName: 'Lambda Psi Rho',
+    year: 2025,
   },
   {
     projectName: 'Easy Tagalog',
+    year: 2024,
+  },
+  {
+    projectName: 'The Las Vegas K-9 Foundation',
+    year: 2023,
   },
   {
     projectName: 'Muver',
+    year: 2023,
   },
   {
     projectName: 'Omnifood',
-  },
-  {
-    projectName: 'Pomodoro Timer',
+    year: 2022,
   },
   {
     projectName: 'Pig Game',
+    year: 2022,
+  },
+  {
+    projectName: 'Pomodoro Timer',
+    year: 2021,
   },
 ];
 
