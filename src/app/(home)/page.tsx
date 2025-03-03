@@ -87,7 +87,9 @@ export default function Home() {
 
       {/* Medium screen size project display */}
       <div className="hidden mt-16 flex-col gap-4 md:flex md:mt-28">
-        <h1 className="font-bold opacity-50 after:">PROJECTS</h1>
+        <h1 className="font-bold opacity-50">
+          <span className="font-rouge-script text-2xl">P</span>ROJECTS
+        </h1>
         <ul className="flex flex-col gap-8">
           {projects.map((project, index) => (
             <li
@@ -117,7 +119,7 @@ export default function Home() {
 
       {/* Mobile/Small screen size project display */}
       <div className="flex flex-col mt-16 gap-8 md:hidden md:mt-28">
-        <h1 className="font-bold opacity-50 after:">
+        <h1 className="font-bold opacity-50">
           <span className="font-rouge-script text-2xl">P</span>ROJECTS
         </h1>
         {projects.map((project, index) => (
