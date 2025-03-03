@@ -30,7 +30,7 @@ export default function Footer() {
             key={index}
             target="_blank"
             rel="noopener noreferrer"
-            className="transition-all hover:text-purple-900"
+            className="opacity-30 transition-all hover:text-white hover:opacity-100"
           >
             <Icon size={ICON_SIZE} />
           </a>

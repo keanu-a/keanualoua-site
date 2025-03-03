@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import { Raleway, Rouge_Script } from 'next/font/google';
-import './globals.css';
+import '../styles/globals.css';
 import Footer from '@/components/Footer';
 import Header from '@/components/Header';
 
@@ -29,7 +29,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${rougeScript.variable} ${ralewaySans.variable} antialiased px-4`}
+        className={`${rougeScript.variable} ${ralewaySans.variable} antialiased px-4 relative`}
       >
         <Header />
         <main>{children}</main>
