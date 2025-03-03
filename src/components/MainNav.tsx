@@ -17,7 +17,7 @@ const navLinks: { text: string; href: string }[] = [
 
 export default function MainNav() {
   return (
-    <nav className="hidden gap-8 fixed right-12 top-20 items-end sm:flex">
+    <nav className="hidden gap-8 fixed right-12 items-end sm:top-16 sm:flex md:top-20">
       {navLinks.map(({ text, href }, index) => (
         <Link
           href={href}
