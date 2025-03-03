@@ -6,11 +6,7 @@ const navLinks: { text: string; href: string }[] = [
     href: '/',
   },
   {
-    text: 'PROJECTS',
-    href: '/',
-  },
-  {
-    text: 'RESUME',
+    text: 'WORK',
     href: '/',
   },
   {
@@ -21,12 +17,16 @@ const navLinks: { text: string; href: string }[] = [
 
 export default function MainNav() {
   return (
-    <div className="flex flex-col gap-2">
+    <nav className="hidden gap-8 fixed right-12 top-20 items-end sm:flex">
       {navLinks.map(({ text, href }, index) => (
-        <Link href={href} key={index}>
+        <Link
+          href={href}
+          key={index}
+          className="font-semibold transition-all hover:text-orange-200"
+        >
           {text}
         </Link>
       ))}
-    </div>
+    </nav>
   );
 }

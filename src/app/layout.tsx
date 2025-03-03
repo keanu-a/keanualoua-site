@@ -1,22 +1,22 @@
-import type { Metadata } from "next";
-import { Raleway, Rouge_Script } from "next/font/google";
-import "../styles/globals.css";
+import type { Metadata } from 'next';
+import { Raleway, Rouge_Script } from 'next/font/google';
+import '../styles/globals.css';
 
 const ralewaySans = Raleway({
-  variable: "--font-raleway",
-  subsets: ["latin"],
+  variable: '--font-raleway',
+  subsets: ['latin'],
 });
 
 const rougeScript = Rouge_Script({
-  weight: "400",
-  variable: "--font-rouge-script",
-  subsets: ["latin"],
+  weight: '400',
+  variable: '--font-rouge-script',
+  subsets: ['latin'],
 });
 
 export const metadata: Metadata = {
-  title: "Keanu Aloua",
+  title: 'Keanu Aloua',
   description:
-    "My portfolio showcasing frontend, backend, and embedded systems work.",
+    'My portfolio showcasing frontend, backend, and embedded systems work.',
 };
 
 export default function RootLayout({

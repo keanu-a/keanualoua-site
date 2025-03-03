@@ -20,9 +20,10 @@ body {
   position: fixed;
   height: 100%;
   width: 100%;
-  z-index: 0;
+  z-index: -1;
   inset: 0;
   margin: auto;
+  filter: blur(100px);
 }
 
 .blob-inner-container {
@@ -33,7 +34,27 @@ body {
   width: 100vw;
   height: 100vh;
   min-width: 1000px;
+  overflow: hidden;
+  transform: scale(0.8);
 }
 
 .blob {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  inset: 0;
+  margin: auto;
+  opacity: 45%;
+  background: conic-gradient(from 0deg, #2A004E, #500073, #C62300, #F14A00, #1E3E62, #091057, #8E1616, #A888B5);
+  animation: blobMove 15s linear infinite;
+}
+
+@keyframes blobMove {
+  0% {
+    transform: rotate(0dev) scale(2);
+  }
+
+  100% {
+    transform: rotate(1turn) scale(2);
+  }
 }

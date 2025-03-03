@@ -22,8 +22,8 @@ const socialLinks: { href: string; Icon: IconType }[] = [
 
 export default function Footer() {
   return (
-    <footer className="fixed bottom-3 w-full hidden md:block">
-      <div className="flex gap-2">
+    <footer className="fixed bottom-4 w-full hidden md:block">
+      <div className="flex gap-6">
         {socialLinks.map(({ href, Icon }, index) => (
           <a
             href={href}
