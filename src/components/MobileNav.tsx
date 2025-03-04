@@ -10,7 +10,7 @@ export default function MobileNav() {
 
   return (
     <div className="fixed right-6 top-12 sm:hidden">
-      <div className="rounded-full shadow-2xl">
+      <div className="rounded-full shadow-2xl transition-all hover:text-orange-200">
         <Hamburger
           size={HAMBURGER_ICON_SIZE}
           onToggle={() => setNavActive((prev) => !prev)}
