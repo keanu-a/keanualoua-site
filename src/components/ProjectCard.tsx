@@ -27,10 +27,7 @@ export default function ProjectCard({ project }: { project: Project }) {
           href={project.link}
           className="transition-all hover:text-orange-200"
         >
-          <HiLink
-            className={`absolute bottom-4 left-${project.github ? '12' : '4'}`}
-            size={ICON_SIZE}
-          />
+          <HiLink className="absolute bottom-4 left-12" size={ICON_SIZE} />
         </Link>
       )}
     </div>
