@@ -7,10 +7,10 @@ import MainNav from './MainNav';
 
 export default function Header() {
   return (
-    <header className="flex justify-between items-center">
+    <header className="flex justify-between items-center fixed top-12 z-50">
       <Link
         href="/"
-        className="w-fit h-fit transition-all hover:text-orange-200 fixed top-12"
+        className="w-fit h-fit transition-all hover:text-orange-200"
       >
         <Name />
       </Link>

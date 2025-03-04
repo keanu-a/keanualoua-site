@@ -87,8 +87,9 @@ export default function Home() {
 
       {/* Medium screen size project display */}
       <div className="hidden mt-16 flex-col gap-4 md:flex md:mt-28">
-        <h1 className="font-bold opacity-50">
-          <span className="font-rouge-script text-2xl">P</span>ROJECTS
+        <h1 className="opacity-60">
+          <span className="font-rouge-script text-2xl">P</span>
+          ROJECTS
         </h1>
         <ul className="flex flex-col gap-8">
           {projects.map((project, index) => (
@@ -112,6 +113,8 @@ export default function Home() {
               >
                 {project.projectName}
               </span>
+
+              <div className="hidden">{hoveredProject}</div>
             </li>
           ))}
         </ul>
