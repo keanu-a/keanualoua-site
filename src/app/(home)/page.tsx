@@ -143,7 +143,7 @@ export default function Home() {
           ROJECTS
         </h1>
         {projects.map((project, index) => (
-          <GlowBox className="relative h-48 p-4" key={index}>
+          <GlowBox className="relative h-52 p-4" key={index}>
             <ProjectCard project={project} />
           </GlowBox>
         ))}
