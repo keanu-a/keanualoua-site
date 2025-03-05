@@ -1,8 +1,8 @@
-'use client';
+"use client";
 
-import Link from 'next/link';
-import { Project } from '@/types/project';
-import { HiCode, HiLink } from 'react-icons/hi';
+import Link from "next/link";
+import { Project } from "@/types/project";
+import { HiCode, HiLink } from "react-icons/hi";
 
 const ICON_SIZE = 20;
 
@@ -11,7 +11,6 @@ export default function ProjectCard({ project }: { project: Project }) {
     <div className="w-full h-full block">
       <h1 className="text-lg uppercase font-medium">{project.projectName}</h1>
       <p className="text-sm mt-4">{project.desc}</p>
-      <p className="absolute bottom-2 right-4">{project.year}</p>
 
       {project.github && (
         <Link
@@ -30,6 +29,8 @@ export default function ProjectCard({ project }: { project: Project }) {
           <HiLink className="absolute bottom-4 left-12" size={ICON_SIZE} />
         </Link>
       )}
+
+      <p className="absolute bottom-2 right-4">{project.year}</p>
     </div>
   );
 }

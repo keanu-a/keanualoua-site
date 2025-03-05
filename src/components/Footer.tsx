@@ -1,21 +1,21 @@
-'use client';
+"use client";
 
-import { IconType } from 'react-icons';
-import { FaGithub, FaLinkedin, FaInstagram } from 'react-icons/fa';
+import { IconType } from "react-icons";
+import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
 
 const ICON_SIZE = 24;
 
 const socialLinks: { href: string; Icon: IconType }[] = [
   {
-    href: 'https://www.linkedin.com/in/keanu-aloua/',
+    href: "https://www.linkedin.com/in/keanu-aloua/",
     Icon: FaLinkedin,
   },
   {
-    href: 'https://github.com/keanu-a',
+    href: "https://github.com/keanu-a",
     Icon: FaGithub,
   },
   {
-    href: 'https://www.instagram.com/al0uaaa',
+    href: "https://www.instagram.com/al0uaaa",
     Icon: FaInstagram,
   },
 ];
@@ -23,7 +23,7 @@ const socialLinks: { href: string; Icon: IconType }[] = [
 export default function Footer() {
   return (
     <footer className="fixed bottom-4 w-full hidden md:block">
-      <div className="flex gap-6">
+      <div className="flex gap-6 fixed right-4 bottom-4">
         {socialLinks.map(({ href, Icon }, index) => (
           <a
             href={href}
