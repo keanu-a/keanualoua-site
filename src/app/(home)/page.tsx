@@ -82,7 +82,7 @@ export default function Home() {
   };
 
   return (
-    <div className="relative px-6 font-raleway">
+    <div className="relative px-6 font-raleway mb-32 md:mb-0">
       <Gradient />
       <Header />
 
