@@ -13,6 +13,10 @@ const navLinks: { text: string; href: string }[] = [
     text: 'CREATIVE',
     href: '/',
   },
+  {
+    text: 'PROJECTS',
+    href: '/projects',
+  },
 ];
 
 export default function MainNav() {
