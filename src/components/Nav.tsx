@@ -1,7 +1,8 @@
-'use client';
+"use client";
 
-import Link from 'next/link';
-import { useEffect, useState } from 'react';
+import Link from "next/link";
+import Time from "./Time";
+import StaggerReelText from "./ui/StaggerReelText";
 // import Hamburger from 'hamburger-react';
 
 // const navLinks: { text: string; href: string }[] = [
@@ -27,25 +28,6 @@ import { useEffect, useState } from 'react';
 
 export default function Nav() {
   // const [navActive, setNavActive] = useState<boolean>(false);
-  const [date, setDate] = useState(new Date());
-
-  useEffect(() => {
-    const interval = setInterval(() => setDate(new Date()), 1000);
-    return () => clearInterval(interval);
-  }, []);
-
-  const formatDate = (date: Date) => {
-    const pad = (n: number) => n.toString().padStart(2, '0');
-
-    const year = date.getFullYear();
-    const month = pad(date.getMonth() + 1); // months are 0-based
-    const day = pad(date.getDate());
-    const hours = pad(date.getHours());
-    const minutes = pad(date.getMinutes());
-    const seconds = pad(date.getSeconds());
-
-    return `${year}-${month}-${day} ${hours}:${minutes}:${seconds}`;
-  };
 
   return (
     <header className="w-screen h-[14vh] fixed top-0 z-50 flex justify-between items-center backdrop-blur-md p-4 sm:px-8">
@@ -64,17 +46,28 @@ export default function Nav() {
           HERE: LAS VEGAS
         </p>
         <p className="text-xs font-semibold sm:text-base">
-          NOW: {formatDate(date)}
+          NOW: <Time />
         </p>
         <Link
           href="/"
           className="w-fit h-fit transition-all hover:text-orange-200"
         >
-          <div className="text-3xl md:text-5xl leading-none tracking-tighter font-raleway font-semibold">
-            KEANU
-          </div>
+          <StaggerReelText
+            text="KEANU"
+            initialTextColor="text-white"
+            className="text-3xl md:text-5xl leading-none tracking-tighter font-raleway font-semibold"
+          />
         </Link>
       </div>
+
+      {/* <div>
+        <Link
+          href="/about"
+          className="font-semibold transition-all hover:text-orange-200"
+        >
+          <StaggerReelText text="ABOUT" initialTextColor="text-white" />
+        </Link>
+      </div> */}
 
       {/* Mobile Nav Menu */}
       {/* <div className="sm:hidden">
