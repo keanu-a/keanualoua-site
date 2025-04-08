@@ -1,4 +1,4 @@
-import Nav from '@/components/Nav';
+import Nav from "@/components/Nav";
 
 export default function layout({
   children,
@@ -8,7 +8,7 @@ export default function layout({
   return (
     <>
       <Nav />
-      <div>{children}</div>
+      <div className="mt-[15vh]">{children}</div>
     </>
   );
 }
