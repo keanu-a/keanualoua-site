@@ -1,9 +1,9 @@
 'use client';
 
 import Footer from '@/components/Footer';
-import GlowBox from '@/components/GlowBox';
+// import GlowBox from '@/components/GlowBox';
 import Gradient from '@/components/Gradient';
-import ProjectCard from '@/components/ProjectCard';
+// import ProjectCard from '@/components/ProjectCard';
 import { Project } from '@/types/project';
 import Image from 'next/image';
 import { MdKeyboardDoubleArrowDown } from 'react-icons/md';
