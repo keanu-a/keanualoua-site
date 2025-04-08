@@ -5,10 +5,10 @@ import GlowBox from '@/components/GlowBox';
 import Gradient from '@/components/Gradient';
 import ProjectCard from '@/components/ProjectCard';
 import { Project } from '@/types/project';
-import { useState } from 'react';
-import { FaLocationDot } from 'react-icons/fa6';
-
-const LOCATION = 'Las Vegas';
+import Image from 'next/image';
+import { MdKeyboardDoubleArrowDown } from 'react-icons/md';
+import { HiCode, HiLink } from 'react-icons/hi';
+import Link from 'next/link';
 
 const projects: Project[] = [
   {
@@ -18,6 +18,7 @@ const projects: Project[] = [
     techStack: ['TypeScript', 'React.js', 'Shadcn'],
     desc: 'The website for a fraternity that seeks to bring out the excellence among men with three pillars: Leadership, Pride, and Respect',
     github: 'https://github.com/keanu-a/lpr-website',
+    link: 'https://www.lambdapsirho.org/',
   },
   {
     projectName: 'Easy Tagalog',
@@ -33,6 +34,7 @@ const projects: Project[] = [
     ],
     desc: 'Learning Tagalog has never been easier with vocabulary, grammar, and even Filipino fulture',
     github: 'https://github.com/Easy-Tagalog',
+    link: 'https://easytagalog.com/',
   },
   {
     projectName: 'The Las Vegas K-9 Foundation',
@@ -72,89 +74,103 @@ const projects: Project[] = [
 ];
 
 export default function Home() {
-  const [hoveredProject, setHoveredProject] = useState<string | null>(null);
-  const [selectedProjectIndex, setSelectedProjectIndex] = useState<number>(0);
-
-  const handleProjectHover = (bgImage: string, index: number) => {
-    setHoveredProject(bgImage);
-    setSelectedProjectIndex(index);
-  };
-
   return (
-    <div className="relative px-6 font-raleway mb-32 md:mb-0">
+    <div className="relative font-raleway mt-[15vh]">
       <Gradient />
 
-      <div className="flex flex-col gap-4 mt-48 max-w-64 md:max-w-[36rem]">
-        <p>
-          Im a 23 year old software engineer who graduated from the University
-          of Nevada, Las Vegas with a B.S. in Computer Science.
-        </p>
-        <p>
-          From the browser to the backend to the bits and bytes—I make it all
-          work.
-        </p>
-        <div className="flex gap-2">
-          <FaLocationDot />
-          <p>{LOCATION}</p>
+      <div className="w-full px-4">
+        <div className="w-full flex justify-center">
+          <Image src="/him.jpg" width={600} height={600} alt="Keanu" />
         </div>
-      </div>
 
-      {/* Medium screen size project display */}
-      <div className="hidden mt-10 flex-col gap-4 md:flex">
-        <h1 className="opacity-60 relative">
-          <span className="font-rouge-script text-2xl">P</span>
-          ROJECTS
-        </h1>
-        <ul className="flex flex-col gap-6">
-          {projects.map((project, index) => (
-            <li
-              key={index}
-              className={`flex w-fit items-center group cursor-pointer text-xl font-medium opacity-20 transition-all hover:opacity-100 ${
-                index === selectedProjectIndex && 'opacity-100'
-              } md:text-3xl`}
-              onMouseEnter={() => handleProjectHover(project.bgImage, index)}
-            >
-              {/* Left line */}
-              <span
-                className={`w-[2px] h-0 bg-white transition-all group-hover:h-8 ${
-                  index === selectedProjectIndex && 'h-8'
-                }`}
-              />
+        <div className="max-w-[600px] mx-auto flex flex-col gap-20">
+          {/* SMALL ABOUT */}
+          <section className="flex flex-col gap-4">
+            <div className="flex flex-col gap-10 text-5xl font-bold mt-10 md:mt-12 md:text-7xl md:gap-12">
+              <p>23 YEARS OLD</p>
+              <p className="flex flex-col">
+                <span>SOFTWARE</span>
+                <span className="text-right">ENGINEER</span>
+              </p>
 
-              {/* Project name */}
-              <span
-                className={`transition-all group-hover:text-white ${
-                  index === selectedProjectIndex &&
-                  '-translate-y-1 text-white md:translate-x-3 md:-translate-y-0'
-                }`}
-              >
-                {project.projectName}
-              </span>
+              <p className="flex flex-col">
+                <span>GRADUATED</span>
+                <span className="flex justify-between">
+                  <span className="ml-28">FROM</span>
+                  <span>THE</span>
+                </span>
+                <span className="flex flex-col">
+                  <span>UNIVERSITY OF NEVADA,</span>
+                  <span className="text-right">LAS VEGAS</span>
+                </span>
+              </p>
+              <p className="flex flex-col">
+                <span className="w-full text-center">B.S. IN</span>
+                <span>COMPUTER</span>
+                <span className="text-right">SCIENCE</span>
+              </p>
+              <div className="space-y-2">
+                <p className="text-lg md:text-xl font-normal">
+                  From the browser to the backend to the bits and bytes, I make
+                  it all work.
+                </p>
+                <p className="text-lg md:text-xl font-normal">
+                  I just want to create software that is impactful to people all
+                  over the world. My focus is in full stack development but
+                  always open to learn more.
+                </p>
+              </div>
+            </div>
+          </section>
 
-              <div className="hidden">{hoveredProject}</div>
-            </li>
-          ))}
-        </ul>
-      </div>
+          <MdKeyboardDoubleArrowDown size={100} className="my-16" />
 
-      {/* Medium/large screen project display */}
-      <div className="hidden absolute right-1/12 bottom-1/8 md:block">
-        <GlowBox className="h-[60vh] w-[40vw] p-4">
-          <img src={projects[selectedProjectIndex].bgImage} />
-        </GlowBox>
-      </div>
+          <section>
+            {/* Medium screen size project display */}
+            <div className="flex-col gap-4 md:flex">
+              <ul className="flex flex-col gap-8">
+                {projects.map((project, index) => (
+                  <li key={index}>
+                    <h1 className="text-3xl font-bold uppercase">
+                      {project.projectName}
+                    </h1>
+                    <p>{project.desc}</p>
+                    <div className="flex gap-8 md:gap-4 py-2">
+                      {project.link && (
+                        <Link
+                          href={project.link}
+                          className="transition-all hover:text-yellow-200"
+                        >
+                          <HiLink size={20} />
+                        </Link>
+                      )}
+                      {project.github && (
+                        <Link
+                          href={project.github}
+                          className="transition-all hover:text-green-200"
+                        >
+                          <HiCode size={20} />
+                        </Link>
+                      )}
+                    </div>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </section>
 
-      {/* Mobile/Small screen size project display */}
-      <div className="flex flex-col mt-16 gap-8 md:hidden md:mt-28">
-        <h1 className="opacity-50 relative after:absolute after:content-[''] after:h-[1px] after:w-2/3 after:bg-white after:top-1/2 after:left-1/3">
-          <span className="font-rouge-script text-2xl">P</span>
-          ROJECTS
-        </h1>
-        {projects.map((project, index) => (
-          <GlowBox className="relative h-52 p-4" key={index}>
-            <ProjectCard project={project} />
-          </GlowBox>
-        ))}
+          <footer className="mt-24 py-4 flex flex-col gap-4">
+            <p className="flex flex-col text-2xl font-bold md:text-4xl">
+              <span>EMAIL ME</span>
+              <span className="text-right">KEANUCALOUA@GMAIL.COM</span>
+            </p>
+
+            {/* <p className="flex flex-col text-2xl font-bold md:text-4xl">
+              <span className="text-center">SOCIALS</span>
+              <span className="">KEANUCALOUA@GMAIL.COM</span>
+            </p> */}
+          </footer>
+        </div>
       </div>
 
       <Footer />
