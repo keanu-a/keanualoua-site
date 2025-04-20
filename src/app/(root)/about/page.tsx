@@ -1,3 +1,4 @@
+import Footer from '@/components/Footer';
 import React from 'react';
 
 const workExperience = [
@@ -45,6 +46,8 @@ export default function About() {
           ))}
         </ul>
       </div>
+
+      <Footer />
     </div>
   );
 }
