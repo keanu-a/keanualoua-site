@@ -77,7 +77,7 @@ const projects: Project[] = [
 export default function Home() {
   return (
     <div className="font-raleway w-full px-5 max-w-[600px] mx-auto flex flex-col gap-24">
-      <Image src="/him.jpg" width={600} height={600} alt="Keanu" />
+      <Image src="/him.webp" width={600} height={600} alt="Keanu" />
 
       {/* SMALL ABOUT */}
       <section className="flex flex-col gap-4">

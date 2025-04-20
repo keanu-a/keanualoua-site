@@ -1,23 +1,25 @@
 'use client';
 
-import { useState } from 'react';
-import { Squash as Hamburger } from 'hamburger-react';
+import Link from 'next/link';
+import { motion } from 'motion/react';
 
-const HAMBURGER_ICON_SIZE = 24;
+const navLinks = [
+  {
+    title: 'about',
+    href: '/about',
+  },
+];
 
-export default function MobileNav() {
-  const [navActive, setNavActive] = useState<boolean>(false);
-
+export default function MobileNav({ closeNav }: { closeNav: () => void }) {
   return (
-    <div className="fixed right-6 top-12 sm:hidden">
-      <div className="rounded-full shadow-2xl transition-all hover:text-orange-200">
-        <Hamburger
-          size={HAMBURGER_ICON_SIZE}
-          onToggle={() => setNavActive((prev) => !prev)}
-        />
-      </div>
-
-      {navActive && <div className="bg-black fixed">Test Nav</div>}
-    </div>
+    <nav>
+      {navLinks.map((link, idx) => (
+        <motion.p key={idx} className="overflow-hidden">
+          <Link href={link.href} onClick={closeNav} className="uppercase">
+            {link.title}
+          </Link>
+        </motion.p>
+      ))}
+    </nav>
   );
 }
