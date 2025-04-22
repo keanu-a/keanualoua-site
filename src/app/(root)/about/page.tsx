@@ -31,12 +31,14 @@ const workExperience = [
 
 export default function About() {
   return (
-    <div className="font-raleway w-full px-5 max-w-[600px] mx-auto flex flex-col gap-24">
-      <h1 className="text-5xl md:text-7xl">ABOUT ME</h1>
+    <div className="font-raleway w-full px-5 mx-auto flex flex-col gap-24">
+      <h1 className="text-[6rem] font-bold leading-none md:text-[8rem]">
+        ABOUT ME
+      </h1>
       <p>My focus is on fullstack engineering.</p>
 
       <div>
-        <h3 className="text-2xl">Work Experience</h3>
+        <h3 className="text-4xl font-bold">WORK EXPERIENCE</h3>
         <ul>
           {workExperience.map((work, idx) => (
             <li key={idx}>

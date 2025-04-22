@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { Raleway, Rouge_Script } from 'next/font/google';
-import '../styles/globals.css';
 import Gradient from '@/components/Gradient';
+import './globals.css';
 import { Analytics } from '@vercel/analytics/next';
 
 const ralewaySans = Raleway({
