@@ -1,8 +1,16 @@
-import Footer from '@/components/Footer';
 import MaxWidthContainer from '@/components/MaxWidthContainer';
 import React from 'react';
 
-const workExperience = [
+const education = [
+  {
+    university: 'University of Nevada, Reno',
+  },
+  {
+    university: 'Unversity of Nevada, Las Vegas',
+  },
+];
+
+const work = [
   {
     title: 'Software Engineer Intern',
     company: '',
@@ -30,6 +38,13 @@ const workExperience = [
   },
 ];
 
+const leadership = [
+  {
+    organization: 'Lambda Psi Rho',
+    role: 'National Board Secretary',
+  },
+];
+
 export default function About() {
   return (
     <div className="font-raleway w-full px-5 mx-auto flex flex-col gap-24">
@@ -38,13 +53,35 @@ export default function About() {
       </div>
 
       <MaxWidthContainer>
-        <p>My focus is on full stack engineering.</p>
+        <p>
+          I&apos;m Keanu and I&apos;m a software engineer focused on full stack
+          applications.
+        </p>
+        <p>
+          I enjoy the creative side of frontend and the heavy logic side of the
+          backend.
+        </p>
       </MaxWidthContainer>
 
       <div>
-        <h3 className="text-4xl font-bold">WORK EXPERIENCE</h3>
+        <div className="flex items-center gap-4">
+          <h3 className="text-xl font-bold">EDUCATION</h3>
+          <hr className="h-px w-full bg-white border-0" />
+        </div>
         <ul>
-          {workExperience.map((work, idx) => (
+          {education.map((edu, idx) => (
+            <li key={idx}>{edu.university}</li>
+          ))}
+        </ul>
+      </div>
+
+      <div>
+        <div className="flex items-center gap-4">
+          <h3 className="text-xl font-bold">WORK</h3>
+          <hr className="h-px w-full bg-white border-0" />
+        </div>
+        <ul>
+          {work.map((work, idx) => (
             <li key={idx}>
               <p>{idx + 1}</p>
               <h4>{work.title}</h4>
@@ -53,7 +90,20 @@ export default function About() {
         </ul>
       </div>
 
-      <Footer />
+      <div>
+        <div className="flex items-center gap-4">
+          <h3 className="text-xl font-bold">LEADERSHIP</h3>
+          <hr className="h-px w-full bg-white border-0" />
+        </div>
+        <ul>
+          {leadership.map((leader, idx) => (
+            <li key={idx}>
+              <p>{idx + 1}</p>
+              <h4>{leader.organization}</h4>
+            </li>
+          ))}
+        </ul>
+      </div>
     </div>
   );
 }

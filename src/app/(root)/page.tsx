@@ -8,7 +8,6 @@ import Image from 'next/image';
 import { MdKeyboardDoubleArrowDown } from 'react-icons/md';
 import { HiCode, HiLink } from 'react-icons/hi';
 import Link from 'next/link';
-import Footer from '@/components/Footer';
 import StaggerReelText from '@/components/ui/StaggerReelText';
 
 const projects: Project[] = [
@@ -158,8 +157,6 @@ export default function Home() {
           </ul>
         </div>
       </section>
-
-      <Footer />
 
       <SocialLinks />
     </div>

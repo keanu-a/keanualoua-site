@@ -1,14 +1,13 @@
 export default function Footer() {
   return (
-    <footer className="py-4 flex flex-col gap-4 max-w-[600px]">
-      <p className="flex flex-col text-2xl font-bold md:text-4xl">
-        <span>EMAIL ME:</span>
+    <footer className="flex flex-col gap-4 mt-20 mb-2 max-w-[95vw] mx-auto">
+      <p className="flex flex-col font-bold text-[6vw] tracking-tight leading-[5vw]">
+        <span>EMAIL ME</span>
         <span className="text-right">KEANUCALOUA@GMAIL.COM</span>
       </p>
 
       <div className="flex items-center gap-4">
-        <hr className="h-px w-full bg-white border-0" />
-        <p className="text-lg font-bold">2025</p>
+        <p className="text-xs font-extralight">All Rights Reserved. 2025</p>
       </div>
     </footer>
   );
