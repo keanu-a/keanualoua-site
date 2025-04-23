@@ -1,4 +1,5 @@
 import Footer from '@/components/Footer';
+import MaxWidthContainer from '@/components/MaxWidthContainer';
 import React from 'react';
 
 const workExperience = [
@@ -32,10 +33,13 @@ const workExperience = [
 export default function About() {
   return (
     <div className="font-raleway w-full px-5 mx-auto flex flex-col gap-24">
-      <h1 className="text-[6rem] font-bold leading-none md:text-[8rem]">
-        ABOUT ME
-      </h1>
-      <p>My focus is on fullstack engineering.</p>
+      <div className="w-full h-[65vh] flex items-center justify-center">
+        <h1 className="flex flex-col font-bold text-8xl sm:text-9xl">ABOUT</h1>
+      </div>
+
+      <MaxWidthContainer>
+        <p>My focus is on full stack engineering.</p>
+      </MaxWidthContainer>
 
       <div>
         <h3 className="text-4xl font-bold">WORK EXPERIENCE</h3>
