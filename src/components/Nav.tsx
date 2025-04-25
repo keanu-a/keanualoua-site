@@ -37,7 +37,7 @@ export default function Nav() {
       <div
         className={cn(
           'relative flex justify-between items-center transition-all duration-500',
-          navActive ? 'h-screen' : 'h-[14vh]'
+          navActive ? 'h-screen' : 'h-[9vh]'
         )}
       >
         {/* Left Section */}
