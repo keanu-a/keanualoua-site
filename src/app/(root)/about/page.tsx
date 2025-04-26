@@ -21,71 +21,139 @@ const work = [
   {
     title: 'Software Engineer Intern',
     company: 'ANA Inc.',
-    from: 'Nov. 2024 - Apr. 2025',
-    desc: 'Test',
+    from: 'Nov 2024 - Apr 2025',
+    desc: 'I contributed over 5,000 lines of production code across three systems. I modernized embedded software, built multi-threaded systems using protocols like UDP, Modbus, and MQTT. I also containerized systems with Docker and collaborated in an agile team on code reviews and sprint planning.',
   },
   {
     title: 'Web Developer',
     company: 'Freelance',
-    from: 'Sep. 2023 - Present',
-    desc: 'Developed the website for a non-profit organization called the Las Vegas K-9 Foundation using React.js. I helped them raise over $4000 in donations. Revamped the website for Lambda Psi Rho fraternity using React.js and Shadcn UI.',
+    from: 'Sep 2023 - Present',
+    desc: 'I built and deployed responsive websites for the Las Vegas K-9 Foundation and Lambda Psi Rho fraternity using React.js. I designed UI mockups in Figma, iterated with stakeholders, and integrated Stripe for real-time donations, helping the foundation raise over $4,000.',
   },
   {
     title: 'Project Manager Intern',
     company: 'Ntooitive Digital',
-    from: 'Mar. 2024 - May 2024',
-    desc: '',
+    from: 'Mar 2024 - May 2024',
+    desc: 'During my internship, I boosted reporting metrics by over 170% by building interactive dashboards using ACS data. I also automated internal tools using Python and Playwright, reducing research and forecasting time by nearly 50%, and enhanced audience targeting by removing 23.5% of outliers via proprietary APIs.',
   },
   {
     title: 'Undergraduate Teaching Assistant',
     company: 'University of Nevada, Las Vegas',
-    from: 'Jan. 2024 - May 2024',
-    desc: '',
+    from: 'Jan 2024 - May 2024',
+    desc: 'I supported students in a compiler theory course by leading weekly office hours, reviewing assignments, and mentoring them through challenging topics like recursive descent parsing, semantic analysis, and building compilers in C++, Python, and Groovy.',
   },
   {
     title: 'Private Tutor',
     company: 'Freelance',
-    from: 'Apr. 2022 - Jul. 2022',
-    desc: '',
+    from: 'Apr 2022 - Jul 2022',
+    desc: 'I privately tutored students in web development, helping them grasp HTML, CSS, JavaScript, and programming fundamentals. I guided them through assignments and personal projects, focusing on real-world skills and problem-solving techniques.',
   },
 ];
 
-const leadership = [
+const community = [
   {
     organization: 'Lambda Psi Rho',
-    role: 'National Board Secretary',
+    roles: [
+      'National Board Secretary',
+      'Executive Vice President',
+      'Vice President of Development',
+      'Social Chair',
+    ],
+  },
+  {
+    organization: 'Alpha Phi Omega',
+    roles: ['Treasurer'],
+  },
+  {
+    organization: 'The Filipinx American Student Association',
+    roles: [],
   },
 ];
 
 export default function About() {
   return (
-    <div className="font-raleway w-[95vw] px-5 mx-auto flex flex-col gap-24">
+    <div className="font-raleway w-[95vw] px-5 mx-auto flex flex-col gap-24 mb-64">
       <div className="w-full h-[65vh] flex items-center justify-center">
         <h1 className="flex flex-col font-bold text-8xl sm:text-9xl">ABOUT</h1>
       </div>
 
-      <MaxWidthContainer>
+      <MaxWidthContainer className="space-y-6">
+        <div className="flex flex-col items-center text-center">
+          <p className="font-bold text-xl sm:text-2xl">
+            Whats up, I&apos;m Keanu Aloua.
+          </p>
+          <div className="text-yellow-400 font-semibold gap-2 sm:flex">
+            <p>I&apos;m Filipino and Polynesian.</p>
+            <p>Born and raised in Las Vegas, NV.</p>
+          </div>
+        </div>
         <p>
-          I&apos;m Keanu and I&apos;m a software engineer focused on full stack
-          applications.
+          My first time programming was in 7th grade when I was a graphic design
+          major. That is when I created my first simple website using HTML, CSS,
+          and JavaScript.
         </p>
-        <p>
-          I enjoy the creative side of frontend and the heavy logic side of the
-          backend.
-        </p>
+
+        <div className="space-y-1">
+          <h2 className="text-xl font-semibold">The Detour</h2>
+          <p>
+            In highschool, I took quite the detour and decided to major in
+            Orchestra where I played Cello and Piano.
+          </p>
+          <p>
+            After many years of travelling to perform, concerts, and recitals, I
+            decided to pick up my passion of technology again in college, and
+            majored in Computer Science.
+          </p>
+        </div>
+
+        <div className="space-y-1">
+          <h2 className="text-xl font-semibold">Rediscovering Code</h2>
+          <p>
+            My journey wasn&apos;t easy. After a rough first year struggling
+            with C and C++, I switched my major to Political Science.
+          </p>
+          <p>
+            It didn&apos;t take long for me to realize I enjoyed math and
+            problem-solving a lot more than writing essays.
+          </p>
+          <p>
+            I transferred from UNR to UNLV, switched back to Computer Science,
+            and surprisingly, my first assembly class reignited my passion for
+            coding.
+          </p>
+          <p>
+            While studying, I explored new technologies on my own and built
+            projects using Python and JavaScript.
+          </p>
+        </div>
+
+        <div className="space-y-1">
+          <h2 className="text-xl font-semibold">Building with Purpose</h2>
+          <p>
+            This self-driven learning eventually led me to pursue real-world
+            impact through tech.
+          </p>
+          <p>
+            I built a website for a non-profit organization, tutored students as
+            a private tutor, became an undergraduate teaching assistant,
+            revamped my fraternity&apos;s website and most recently, started
+            developing Easy Tagalog which is a language-learning app designed to
+            reconnect with my heritage and help others do the same.
+          </p>
+        </div>
       </MaxWidthContainer>
 
       <div className="space-y-8">
-        <div className="flex items-center gap-4">
-          <h3 className="text-xl font-bold">EDUCATION</h3>
+        <div className="flex items-center gap-2 md:gap-4">
+          <h3 className="font-bold md:text-lg">EDUCATION</h3>
           <hr className="h-px w-full bg-white border-0" />
         </div>
         <ul className="space-y-8">
           {education.map((edu, idx) => (
             <li key={idx}>
-              <h4 className="text-4xl">{edu.university}</h4>
+              <h4 className="text-3xl md:text-4xl">{edu.university}</h4>
               <div className="flex flex-col text-xl md:flex-row md:justify-between">
-                <p className=" text-gray-500 font-medium">{edu.major}</p>
+                <p className=" text-white/40 font-medium">{edu.major}</p>
                 <p>{edu.term}</p>
               </div>
             </li>
@@ -94,11 +162,11 @@ export default function About() {
       </div>
 
       <div className="space-y-8">
-        <div className="flex items-center gap-4">
-          <h3 className="text-xl font-bold">WORK</h3>
+        <div className="flex items-center gap-2 md:gap-4">
+          <h3 className="font-bold md:text-lg">WORK</h3>
           <hr className="h-px w-full bg-white border-0" />
         </div>
-        <ul className="space-y-8">
+        <ul className="space-y-16">
           {work.map((work, idx) => (
             <li
               key={idx}
@@ -107,9 +175,9 @@ export default function About() {
               <p className="text-xl">{work.from}</p>
               <div className="col-span-2 space-y-4">
                 <div>
-                  <p className="text-4xl">{work.company}</p>
-                  <p className="text-gray-500 font-medium text-xl">
-                    {work.title}
+                  <p className="text-3xl md:text-4xl">{work.title}</p>
+                  <p className="text-white/40 font-semibold text-xl">
+                    {work.company}
                   </p>
                 </div>
                 <p>{work.desc}</p>
@@ -120,15 +188,24 @@ export default function About() {
       </div>
 
       <div className="space-y-8">
-        <div className="flex items-center gap-4">
-          <h3 className="text-xl font-bold">LEADERSHIP</h3>
+        <div className="flex items-center gap-2 md:gap-4">
+          <h3 className="font-bold md:text-lg">COMMUNITY</h3>
           <hr className="h-px w-full bg-white border-0" />
         </div>
-        <ul>
-          {leadership.map((leader, idx) => (
+        <ul className="space-y-8">
+          {community.map((leader, idx) => (
             <li key={idx}>
-              <p>{idx + 1}</p>
-              <h4>{leader.organization}</h4>
+              <h4 className="text-3xl md:text-4xl">{leader.organization}</h4>
+              <ul className="gap-12 md:flex md:flex-row">
+                {leader.roles.map((role, roleIdx) => (
+                  <li
+                    key={roleIdx}
+                    className="text-white/40 font-semibold text-xl"
+                  >
+                    {role}
+                  </li>
+                ))}
+              </ul>
             </li>
           ))}
         </ul>

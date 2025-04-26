@@ -40,6 +40,14 @@ export default function Nav() {
           navActive ? 'h-screen' : 'h-[9vh]'
         )}
       >
+        {/* Mobile Nav Menu */}
+        {navActive && (
+          <MobileNav
+            className="h-full justify-center items-center flex px-4"
+            closeNav={() => setNavActive(false)}
+          />
+        )}
+
         {/* Left Section */}
         <div className="absolute top-2 left-2">
           <p className="text-xs sm:text-sm">HERE: LAS VEGAS</p>
@@ -84,9 +92,6 @@ export default function Nav() {
           ))}
         </div>
       </div>
-
-      {/* Mobile Nav Menu */}
-      {navActive && <MobileNav closeNav={() => setNavActive(false)} />}
     </header>
   );
 }

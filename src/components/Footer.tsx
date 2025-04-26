@@ -7,7 +7,7 @@ export default function Footer() {
       </p>
 
       <div className="flex items-center gap-4">
-        <p className="text-xs font-extralight">All Rights Reserved. 2025</p>
+        <p className="text-xs">All Rights Reserved. 2025</p>
       </div>
     </footer>
   );

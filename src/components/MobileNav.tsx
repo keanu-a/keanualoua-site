@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { motion } from 'motion/react';
+import { cn } from '@/utils/cn';
 
 const navLinks = [
   {
@@ -10,12 +11,22 @@ const navLinks = [
   },
 ];
 
-export default function MobileNav({ closeNav }: { closeNav: () => void }) {
+export default function MobileNav({
+  className,
+  closeNav,
+}: {
+  className?: string;
+  closeNav: () => void;
+}) {
   return (
-    <nav>
+    <nav className={cn(className)}>
       {navLinks.map((link, idx) => (
         <motion.p key={idx} className="overflow-hidden">
-          <Link href={link.href} onClick={closeNav} className="uppercase">
+          <Link
+            href={link.href}
+            onClick={closeNav}
+            className="uppercase text-4xl font-bold"
+          >
             {link.title}
           </Link>
         </motion.p>
