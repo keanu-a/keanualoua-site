@@ -77,21 +77,21 @@ export default function About() {
 
       <div className="space-y-6 max-w-[600px] mx-auto">
         <div>
-          <p className="font-bold text-2xl sm:text-2xl">
+          <p className="font-bold text-3xl sm:text-2xl">
             Whats up, I&apos;m Keanu Aloua.
           </p>
-          <div className="text-lg font-semibold gap-2 sm:flex">
+          <div className="text-xl font-semibold gap-2 sm:flex">
             <p className="text-right">I&apos;m Filipino and Polynesian.</p>
             <p>Born and raised in Las Vegas, NV.</p>
           </div>
         </div>
-        <p>
+        <p className="text-lg">
           My first time programming was in 7th grade when I was a graphic design
           major. That is when I created my first simple website using HTML, CSS,
           and JavaScript.
         </p>
 
-        <div className="space-y-1">
+        <div className="space-y-1 md:text-lg">
           <h2 className="text-xl font-semibold">The Detour</h2>
           <p>
             In highschool, I took quite the detour and decided to major in
@@ -104,7 +104,7 @@ export default function About() {
           </p>
         </div>
 
-        <div className="space-y-1">
+        <div className="space-y-1 md:text-lg">
           <h2 className="text-xl font-semibold">Rediscovering Code</h2>
           <p>
             My journey wasn&apos;t easy. After a rough first year struggling
@@ -125,7 +125,7 @@ export default function About() {
           </p>
         </div>
 
-        <div className="space-y-1">
+        <div className="space-y-1 md:text-lg">
           <h2 className="text-xl font-semibold">Building with Purpose</h2>
           <p>
             This self-driven learning eventually led me to pursue real-world
@@ -180,7 +180,7 @@ export default function About() {
                   </p>
                   <p className="uppercase text-white/40">{work.company}</p>
                 </div>
-                <p>{work.desc}</p>
+                <p className="md:text-lg">{work.desc}</p>
               </div>
             </li>
           ))}

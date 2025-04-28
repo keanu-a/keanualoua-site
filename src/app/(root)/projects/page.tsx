@@ -112,7 +112,7 @@ export default function Projects() {
                 <Image
                   src={project.bgImage}
                   alt={project.projectName}
-                  width={500}
+                  width={600}
                   height={300}
                   quality={100}
                   priority
@@ -121,14 +121,14 @@ export default function Projects() {
               <div className="space-y-8 md:w-1/2">
                 <div>
                   <div className="flex flex-col justify-between sm:flex-row">
-                    <h3 className="text-3xl tracking-tight font-bold">
+                    <h3 className="text-3xl sm:text-4xl tracking-tight font-bold">
                       {project.projectName}
                     </h3>
                     <span>{project.year}</span>
                   </div>
                   <h4 className="uppercase text-white/40">{project.role}</h4>
                 </div>
-                <p>{project.desc}</p>
+                <p className="md:text-lg">{project.desc}</p>
                 <div className="flex gap-8 md:gap-4 py-2">
                   {project.link && (
                     <Link
@@ -160,7 +160,10 @@ export default function Projects() {
         </div>
         <ul className="space-y-4">
           {moreProjects.map((project, idx) => (
-            <li key={idx} className="text-3xl tracking-tight">
+            <li
+              key={idx}
+              className="text-3xl font-bold sm:text-4xl tracking-tight"
+            >
               <StaggerReelText
                 text={project.projectName}
                 initialTextColor="white"

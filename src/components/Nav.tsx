@@ -29,7 +29,7 @@ export default function Nav() {
       <div
         className={cn(
           'relative flex justify-between items-center transition-all duration-500',
-          navActive ? 'h-screen' : 'h-[10vh] sm:h-[11vh]'
+          navActive ? 'h-screen' : 'h-[4.5em] sm:h-[5em]'
         )}
       >
         {/* Mobile Nav Menu */}
