@@ -1,14 +1,9 @@
-'use client';
-
-import SocialLinks from '@/components/SocialLinks';
-// import GlowBox from '@/components/GlowBox';
-// import ProjectCard from '@/components/ProjectCard';
-import { Project } from '@/types/project';
 import Image from 'next/image';
+import Link from 'next/link';
 import { MdKeyboardDoubleArrowDown } from 'react-icons/md';
 import { HiCode, HiLink } from 'react-icons/hi';
-import Link from 'next/link';
 import StaggerReelText from '@/components/ui/StaggerReelText';
+import { Project } from '@/types/project';
 
 const projects: Project[] = [
   {
@@ -157,8 +152,6 @@ export default function Home() {
           </ul>
         </div>
       </section>
-
-      <SocialLinks />
     </div>
   );
 }

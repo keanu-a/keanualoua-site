@@ -1,5 +1,3 @@
-import MaxWidthContainer from '@/components/MaxWidthContainer';
-
 const education = [
   {
     university: 'University of Nevada, Las Vegas',
@@ -77,13 +75,13 @@ export default function About() {
         <h1 className="flex flex-col font-bold text-8xl sm:text-9xl">ABOUT</h1>
       </div>
 
-      <MaxWidthContainer className="space-y-6">
-        <div className="flex flex-col items-center text-center">
-          <p className="font-bold text-xl sm:text-2xl">
+      <div className="space-y-6 max-w-[600px] mx-auto">
+        <div>
+          <p className="font-bold text-2xl sm:text-2xl">
             Whats up, I&apos;m Keanu Aloua.
           </p>
-          <div className="text-yellow-400 font-semibold gap-2 sm:flex">
-            <p>I&apos;m Filipino and Polynesian.</p>
+          <div className="text-lg font-semibold gap-2 sm:flex">
+            <p className="text-right">I&apos;m Filipino and Polynesian.</p>
             <p>Born and raised in Las Vegas, NV.</p>
           </div>
         </div>
@@ -141,19 +139,21 @@ export default function About() {
             reconnect with my heritage and help others do the same.
           </p>
         </div>
-      </MaxWidthContainer>
+      </div>
 
       <div className="space-y-8">
         <div className="flex items-center gap-2 md:gap-4">
-          <h3 className="font-bold md:text-lg">EDUCATION</h3>
+          <h3 className="md:text-lg">EDUCATION</h3>
           <hr className="h-px w-full bg-white border-0" />
         </div>
         <ul className="space-y-8">
           {education.map((edu, idx) => (
             <li key={idx}>
-              <h4 className="text-3xl md:text-4xl">{edu.university}</h4>
-              <div className="flex flex-col text-xl md:flex-row md:justify-between">
-                <p className=" text-white/40 font-medium">{edu.major}</p>
+              <h4 className="text-3xl font-bold tracking-tight md:text-4xl">
+                {edu.university}
+              </h4>
+              <div className="flex flex-col md:flex-row md:justify-between">
+                <p className="uppercase text-white/40">{edu.major}</p>
                 <p>{edu.term}</p>
               </div>
             </li>
@@ -163,7 +163,7 @@ export default function About() {
 
       <div className="space-y-8">
         <div className="flex items-center gap-2 md:gap-4">
-          <h3 className="font-bold md:text-lg">WORK</h3>
+          <h3 className="md:text-lg">WORK</h3>
           <hr className="h-px w-full bg-white border-0" />
         </div>
         <ul className="space-y-16">
@@ -175,10 +175,10 @@ export default function About() {
               <p className="text-xl">{work.from}</p>
               <div className="col-span-2 space-y-4">
                 <div>
-                  <p className="text-3xl md:text-4xl">{work.title}</p>
-                  <p className="text-white/40 font-semibold text-xl">
-                    {work.company}
+                  <p className="text-3xl font-bold tracking-tight md:text-4xl">
+                    {work.title}
                   </p>
+                  <p className="uppercase text-white/40">{work.company}</p>
                 </div>
                 <p>{work.desc}</p>
               </div>
@@ -189,19 +189,18 @@ export default function About() {
 
       <div className="space-y-8">
         <div className="flex items-center gap-2 md:gap-4">
-          <h3 className="font-bold md:text-lg">COMMUNITY</h3>
+          <h3 className="md:text-lg">COMMUNITY</h3>
           <hr className="h-px w-full bg-white border-0" />
         </div>
         <ul className="space-y-8">
           {community.map((leader, idx) => (
             <li key={idx}>
-              <h4 className="text-3xl md:text-4xl">{leader.organization}</h4>
+              <h4 className="text-3xl font-bold tracking-tight md:text-4xl">
+                {leader.organization}
+              </h4>
               <ul className="gap-12 md:flex md:flex-row">
                 {leader.roles.map((role, roleIdx) => (
-                  <li
-                    key={roleIdx}
-                    className="text-white/40 font-semibold text-xl"
-                  >
+                  <li key={roleIdx} className="uppercase text-white/40">
                     {role}
                   </li>
                 ))}

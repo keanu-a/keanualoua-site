@@ -13,18 +13,10 @@ const navLinks: { text: string; href: string }[] = [
     text: 'ABOUT',
     href: '/about',
   },
-  // {
-  //   text: 'WORK',
-  //   href: '/',
-  // },
-  // {
-  //   text: 'CREATIVE',
-  //   href: '/',
-  // },
-  // {
-  //   text: 'PROJECTS',
-  //   href: '/projects',
-  // },
+  {
+    text: 'PROJECTS',
+    href: '/projects',
+  },
 ];
 
 const HAMBURGER_ICON_SIZE = 24;
@@ -37,13 +29,13 @@ export default function Nav() {
       <div
         className={cn(
           'relative flex justify-between items-center transition-all duration-500',
-          navActive ? 'h-screen' : 'h-[9vh]'
+          navActive ? 'h-screen' : 'h-[10vh] sm:h-[11vh]'
         )}
       >
         {/* Mobile Nav Menu */}
         {navActive && (
           <MobileNav
-            className="h-full justify-center items-center flex px-4"
+            className="h-full justify-center flex flex-col px-4 space-y-2"
             closeNav={() => setNavActive(false)}
           />
         )}
@@ -79,14 +71,14 @@ export default function Nav() {
           </div>
         </div>
 
-        <div className="hidden absolute right-4 sm:flex space-x-4">
+        <div className="hidden absolute right-4 sm:flex space-x-6">
           {/* Desktop Nav Links */}
           {navLinks.map(({ text, href }, index) => (
             <Link href={href} key={index}>
               <StaggerReelText
                 text={text}
                 initialTextColor="text-white"
-                className="text-lg leading-none tracking-tighter font-raleway font-bold"
+                className="text-lg leading-none tracking-tight font-raleway font-semibold"
               />
             </Link>
           ))}

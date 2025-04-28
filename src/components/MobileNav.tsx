@@ -9,6 +9,10 @@ const navLinks = [
     title: 'about',
     href: '/about',
   },
+  {
+    title: 'projects',
+    href: '/projects',
+  },
 ];
 
 export default function MobileNav({
