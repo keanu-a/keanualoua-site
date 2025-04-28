@@ -1,7 +1,13 @@
-# My portfolio website as of 2025 revamped with Next.js
+# My 2025 Porfolio Website
 
-## Deploy on Vercel
+This is my personal portfolio website showcasing my software engineer projects, skills, and professional background. I built this website using Next.js, TypeScript, Tailwind CSS, ShadCN, and deployed on Vercel.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Visit
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Live site: [keanualoua.com](https://keanualoua.com/)
+
+## Features
+- Responsive design for desktop, tablet, and mobile
+- Microanimations like staggering text
+- SEO friendly
+- Project showcase with images and links
