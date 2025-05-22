@@ -1,70 +1,73 @@
-import StaggerReelText from '@/components/ui/StaggerReelText';
-import Image from 'next/image';
-import Link from 'next/link';
+import StaggerReelText from "@/components/ui/StaggerReelText";
+import Image from "next/image";
+import Link from "next/link";
 
 const projects = [
   {
-    projectName: 'Easy Tagalog',
-    role: 'Founding Engineer',
+    projectName: "Easy Tagalog",
+    role: "Founding Engineer",
 
-    year: '2024-2025',
-    bgImage: '/projects/et-cover.webp',
+    year: "2024-2025",
+    bgImage: "/projects/et-cover.webp",
     techStack: [
-      'TypeScript',
-      'Next.js',
-      'Java',
-      'Spring Boot',
-      'PostgreSQL',
-      'Shadcn',
-      'Docker',
+      "TypeScript",
+      "Next.js",
+      "Java",
+      "Spring Boot",
+      "PostgreSQL",
+      "Shadcn",
+      "Docker",
     ],
-    desc: 'Aiming to fill market gap in effective learning for Tagalog. Developed a full stack language learning platform using Next.js for the frontend and Spring Boot for the backend. Currently supports 400+ translations.',
-    link: 'https://easytagalog.com/',
-    github: 'https://github.com/Easy-Tagalog',
+    desc: "Aiming to fill market gap in effective learning for Tagalog. Developed a full stack language learning platform using Next.js for the frontend and Spring Boot for the backend. Currently supports 400+ translations.",
+    link: "https://easytagalog.com/",
+    github: "https://github.com/Easy-Tagalog",
   },
   {
-    projectName: 'Lambda Psi Rho',
-    role: 'Web Developer',
-    year: '2025',
-    bgImage: '/projects/lpr-cover.webp',
-    techStack: ['TypeScript', 'React.js', 'Shadcn'],
+    projectName: "Lambda Psi Rho",
+    role: "Web Developer",
+    year: "2025",
+    bgImage: "/projects/lpr-cover.webp",
+    techStack: ["TypeScript", "React.js", "Shadcn"],
     desc: "Revamped Lambda Psi Rho's landing page from Jekyll to React.js, modernizing their digital presence with animations using Motion, and increasing the organization's credibility.",
-    link: 'https://www.lambdapsirho.org/',
-    github: 'https://github.com/keanu-a/lpr-website',
+    link: "https://www.lambdapsirho.org/",
+    github: "https://github.com/keanu-a/lpr-website",
   },
   {
-    projectName: 'The Las Vegas K-9 Foundation',
-    role: 'Web Developer',
-    year: '2023-2025',
-    bgImage: '/projects/lvk9f-cover.webp',
-    techStack: ['TypeScript', 'React.js', 'Stripe'],
-    desc: 'Developed the website at the time for a new upcoming non-profit organization using React.js. Integrated Stripe allowing the organization to raise over $4000 in donations. Deployed on vercel for seamless CI/CD and easy analytics tracking.',
-    github: 'https://github.com/keanu-a/the-lvk9f',
-    link: 'https://www.lasvegask9foundation.org/about-us',
+    projectName: "The Las Vegas K-9 Foundation",
+    role: "Web Developer",
+    year: "2023-2025",
+    bgImage: "/projects/lvk9f-cover.webp",
+    techStack: ["TypeScript", "React.js", "Stripe"],
+    desc: "Developed the website at the time for a new upcoming non-profit organization using React.js. Integrated Stripe allowing the organization to raise over $4000 in donations. Deployed on vercel for seamless CI/CD and easy analytics tracking.",
+    github: "https://github.com/keanu-a/the-lvk9f",
+    link: "https://www.lasvegask9foundation.org/about-us",
   },
   {
-    projectName: 'Muver',
-    role: 'Fullstack Engineer',
-    year: '2023',
-    bgImage: '/projects/muver-cover.webp',
-    techStack: ['TypeScript', 'React.js', 'Express.js', 'MongoDB', 'Docker'],
-    desc: 'Worked in a team of 7 to develop a full stack logistics platform for users to connect and create an economy for moving. My focus was on creating the backend using Express.js with connection to our NoSQL database hosted on MongoDB.',
-    github: 'https://github.com/Uber-for-Moving-Trucks/muver',
+    projectName: "Muver",
+    role: "Fullstack Engineer",
+    year: "2023",
+    bgImage: "/projects/muver-cover.webp",
+    techStack: ["TypeScript", "React.js", "Express.js", "MongoDB", "Docker"],
+    desc: "Worked in a team of 7 to develop a full stack logistics platform for users to connect and create an economy for moving. My focus was on creating the backend using Express.js with connection to our NoSQL database hosted on MongoDB.",
+    github: "https://github.com/Uber-for-Moving-Trucks/muver",
   },
 ];
 
 const moreProjects = [
   {
-    projectName: 'Omnifood',
+    projectName: "Traffic Image Segmentation",
   },
   {
-    projectName: 'Old Portfolio',
+    projectName: "Omnifood",
   },
   {
-    projectName: 'Routine Tracker',
+    projectName: "Old Portfolio",
   },
   {
-    projectName: 'Pomodoro Timer',
+    projectName: "Routine Tracker",
+  },
+  {
+    projectName: "Pomodoro Timer",
   },
 ];
 
