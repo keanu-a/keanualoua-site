@@ -17,6 +17,12 @@ const education = [
 
 const work = [
   {
+    title: 'Software Engineering Resdient',
+    company: 'Netlify',
+    from: 'Jul 2025 - Present',
+    desc: ''
+  },
+  {
     title: 'Software Engineer Intern',
     company: 'ANA Inc.',
     from: 'Nov 2024 - Apr 2025',
@@ -87,8 +93,7 @@ export default function About() {
         </div>
         <p className="text-lg">
           My first time programming was in 7th grade when I was a graphic design
-          major. That is when I created my first simple website using HTML, CSS,
-          and JavaScript.
+          major, creating a simple HTML/CSS website.
         </p>
 
         <div className="space-y-1 md:text-lg">
@@ -108,11 +113,7 @@ export default function About() {
           <h2 className="text-xl font-semibold">Rediscovering Code</h2>
           <p>
             My journey wasn&apos;t easy. After a rough first year struggling
-            with C and C++, I switched my major to Political Science.
-          </p>
-          <p>
-            It didn&apos;t take long for me to realize I enjoyed math and
-            problem-solving a lot more than writing essays.
+            with C and C++, I switched my major to Political Science (which I didn't enjoy).
           </p>
           <p>
             I transferred from UNR to UNLV, switched back to Computer Science,
@@ -133,10 +134,9 @@ export default function About() {
           </p>
           <p>
             I built a website for a non-profit organization, tutored students as
-            a private tutor, became an undergraduate teaching assistant,
-            revamped my fraternity&apos;s website and most recently, started
-            developing Easy Tagalog which is a language-learning app designed to
-            reconnect with my heritage and help others do the same.
+            a private tutor, became a teaching assistant, revamped my fraternity&apos;s 
+            website and most recently, started developing Easy Tagalog which is a language-learning 
+            app designed to reconnect with my heritage and help others do the same.
           </p>
         </div>
       </div>
