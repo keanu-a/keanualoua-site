@@ -17,6 +17,12 @@ const education = [
 
 const work = [
   {
+    title: 'Software Engineering Resident',
+    company: 'Netlify',
+    from: 'Jul 2025 - Oct 2025',
+    desc: '',
+  },
+  {
     title: 'Software Engineer Intern',
     company: 'ANA Inc.',
     from: 'Nov 2024 - Apr 2025',
@@ -154,7 +160,7 @@ export default function About() {
               </h4>
               <div className="flex flex-col md:flex-row md:justify-between">
                 <p className="uppercase text-white/40">{edu.major}</p>
-                <p>{edu.term}</p>
+                <p className="text-lg">{edu.term}</p>
               </div>
             </li>
           ))}

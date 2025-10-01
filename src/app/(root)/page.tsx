@@ -76,7 +76,7 @@ export default function Home() {
       {/* SMALL ABOUT */}
       <section className="flex flex-col gap-4">
         <div className="flex flex-col gap-10 text-5xl font-bold md:text-7xl md:gap-12">
-          <p>23 YEARS OLD</p>
+          <p>24 YEARS OLD</p>
           <p className="flex flex-col">
             <span>SOFTWARE</span>
             <span className="text-right">ENGINEER</span>
