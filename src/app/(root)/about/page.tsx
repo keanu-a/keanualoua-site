@@ -20,7 +20,7 @@ const work = [
     title: 'Software Engineering Resident',
     company: 'Netlify',
     from: 'Jul 2025 - Oct 2025',
-    desc: 'I was part of Netlify\'s Pod Experience team, collaborating with engineers globally to refactor internal systems, manage dependency updates, and ship React frontend improvements used on the Netlify platform.'
+    desc: "I was part of Netlify's Pod Experience team, collaborating with engineers globally to refactor internal systems, manage dependency updates, and ship React frontend improvements used on the Netlify platform."
   },
   {
     title: 'Software Engineer Intern',
