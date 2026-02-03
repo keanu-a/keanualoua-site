@@ -154,7 +154,7 @@ export default function About() {
               </h4>
               <div className="flex flex-col md:flex-row md:justify-between">
                 <p className="uppercase text-white/40">{edu.major}</p>
-                <p>{edu.term}</p>
+                <p className="text-lg">{edu.term}</p>
               </div>
             </li>
           ))}
