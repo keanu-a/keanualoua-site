@@ -113,7 +113,7 @@ export default function About() {
           <h2 className="text-xl font-semibold">Rediscovering Code</h2>
           <p>
             My journey wasn&apos;t easy. After a rough first year struggling
-            with C and C++, I switched my major to Political Science (which I didn't enjoy).
+            with C and C++, I switched my major to Political Science (which I didn&apos;t enjoy).
           </p>
           <p>
             I transferred from UNR to UNLV, switched back to Computer Science,
