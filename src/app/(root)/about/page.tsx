@@ -188,10 +188,10 @@ export default function About() {
               key={idx}
               className="flex flex-col space-y-2 justify-between md:grid md:grid-cols-3"
             >
-              <p className="md:text-lg">{work.from}</p>
-              <div className="col-span-2 space-y-4">
-                <div className="flex items-center gap-4">
-                  <div className="bg-white p-3 rounded-lg w-[100px] h-[100px] flex justify-center items-center">
+              <p className="md:text-lg md:col-span-1">{work.from}</p>
+              <div className="col-span-2 space-y-4 md:col-span-2">
+                <div className="grid grid-cols-3 items-center gap-4 md:flex">
+                  <div className="bg-white p-3 rounded-lg w-[100px] h-[100px] flex justify-center items-center col-span-1">
                     <Image
                       src={work.src}
                       alt={work.altText}
@@ -200,11 +200,13 @@ export default function About() {
                       className="object-contain"
                     />
                   </div>
-                  <div className="flex flex-col">
-                    <p className="text-3xl font-bold tracking-tight md:text-4xl">
+                  <div className="col-span-2">
+                    <p className="text-2xl font-bold tracking-tight md:text-4xl">
                       {work.company}
                     </p>
-                    <p className="uppercase text-white/40">{work.title}</p>
+                    <p className="text-sm md:text-base uppercase text-white/40">
+                      {work.title}
+                    </p>
                   </div>
                 </div>
                 <p className="md:text-lg">{work.desc}</p>
