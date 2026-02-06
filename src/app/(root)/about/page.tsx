@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 const education = [
   {
     university: 'University of Nevada, Las Vegas',
@@ -20,37 +22,49 @@ const work = [
     title: 'Software Engineering Resident',
     company: 'Netlify',
     from: 'Jul 2025 - Oct 2025',
-    desc: "I was part of Netlify's Pod Experience team, collaborating with engineers globally to refactor internal systems, manage dependency updates, and ship React frontend improvements used on the Netlify platform."
+    desc: "I was part of Netlify's Pod Experience team, collaborating with engineers globally to refactor internal systems, manage dependency updates, and ship React frontend improvements used on the Netlify platform.",
+    src: '/work/netlify-logo.png',
+    altText: 'Netlify logo',
   },
   {
     title: 'Software Engineer Intern',
     company: 'ANA Inc.',
     from: 'Nov 2024 - Apr 2025',
     desc: 'I contributed over 5,000 lines of production code across three systems. I modernized embedded software, built multi-threaded systems using protocols like UDP, Modbus, and MQTT. I also containerized systems with Docker and collaborated in an agile team on code reviews and sprint planning.',
+    src: '/work/ana-logo.png',
+    altText: 'ANA Inc. logo',
   },
   {
     title: 'Web Developer',
     company: 'Freelance',
     from: 'Sep 2023 - Present',
     desc: 'I built and deployed responsive websites for the Las Vegas K-9 Foundation and Lambda Psi Rho fraternity using React.js. I designed UI mockups in Figma, iterated with stakeholders, and integrated Stripe for real-time donations, helping the foundation raise over $4,000.',
+    src: '/work/freelance-logo.png',
+    altText: 'Freelance logo',
   },
   {
     title: 'Project Manager Intern',
     company: 'Ntooitive Digital',
     from: 'Mar 2024 - May 2024',
     desc: 'During my internship, I boosted reporting metrics by over 170% by building interactive dashboards using ACS data. I also automated internal tools using Python and Playwright, reducing research and forecasting time by nearly 50%, and enhanced audience targeting by removing 23.5% of outliers via proprietary APIs.',
+    src: '/work/ntooitive-logo.webp',
+    altText: 'Ntooitive Digital logo',
   },
   {
     title: 'Undergraduate Teaching Assistant',
     company: 'University of Nevada, Las Vegas',
     from: 'Jan 2024 - May 2024',
     desc: 'I supported students in a compiler theory course by leading weekly office hours, reviewing assignments, and mentoring them through challenging topics like recursive descent parsing, semantic analysis, and building compilers in C++, Python, and Groovy.',
+    src: '/work/unlv-logo.png',
+    altText: 'University of Nevada, Las Vegas logo',
   },
   {
     title: 'Private Tutor',
     company: 'Freelance',
     from: 'Apr 2022 - Jul 2022',
     desc: 'I privately tutored students in web development, helping them grasp HTML, CSS, JavaScript, and programming fundamentals. I guided them through assignments and personal projects, focusing on real-world skills and problem-solving techniques.',
+    src: '/work/freelance-logo.png',
+    altText: 'Freelance logo',
   },
 ];
 
@@ -113,7 +127,8 @@ export default function About() {
           <h2 className="text-xl font-semibold">Rediscovering Code</h2>
           <p>
             My journey wasn&apos;t easy. After a rough first year struggling
-            with C and C++, I switched my major to Political Science (which I didn&apos;t enjoy).
+            with C and C++, I switched my major to Political Science (which I
+            didn&apos;t enjoy).
           </p>
           <p>
             I transferred from UNR to UNLV, switched back to Computer Science,
@@ -134,9 +149,10 @@ export default function About() {
           </p>
           <p>
             I built a website for a non-profit organization, tutored students as
-            a private tutor, became a teaching assistant, revamped my fraternity&apos;s 
-            website and most recently, started developing Easy Tagalog which is a language-learning 
-            app designed to reconnect with my heritage and help others do the same.
+            a private tutor, became a teaching assistant, revamped my
+            fraternity&apos;s website and most recently, started developing Easy
+            Tagalog which is a language-learning app designed to reconnect with
+            my heritage and help others do the same.
           </p>
         </div>
       </div>
@@ -172,13 +188,24 @@ export default function About() {
               key={idx}
               className="flex flex-col space-y-2 justify-between md:grid md:grid-cols-3"
             >
-              <p className="text-xl">{work.from}</p>
+              <p className="md:text-lg">{work.from}</p>
               <div className="col-span-2 space-y-4">
-                <div>
-                  <p className="text-3xl font-bold tracking-tight md:text-4xl">
-                    {work.title}
-                  </p>
-                  <p className="uppercase text-white/40">{work.company}</p>
+                <div className="flex items-center gap-4">
+                  <div className="bg-white p-3 rounded-lg w-[100px] h-[100px] flex justify-center items-center">
+                    <Image
+                      src={work.src}
+                      alt={work.altText}
+                      width={80}
+                      height={80}
+                      className="object-contain"
+                    />
+                  </div>
+                  <div className="flex flex-col">
+                    <p className="text-3xl font-bold tracking-tight md:text-4xl">
+                      {work.company}
+                    </p>
+                    <p className="uppercase text-white/40">{work.title}</p>
+                  </div>
                 </div>
                 <p className="md:text-lg">{work.desc}</p>
               </div>
