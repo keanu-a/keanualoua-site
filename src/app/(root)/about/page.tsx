@@ -19,6 +19,14 @@ const education = [
 
 const work = [
   {
+    title: 'AI Expert Contributor',
+    company: 'Snorkel AI',
+    from: 'Jun 2026 - Present',
+    desc: 'Training AI models on challenging coding tasks',
+    src: '/work/snorkel-logo.webp',
+    altText: 'Snorkel AI logo',
+  },
+  {
     title: 'Software Engineering Resident',
     company: 'Netlify',
     from: 'Jul 2025 - Oct 2025',
@@ -90,28 +98,28 @@ const community = [
 
 export default function About() {
   return (
-    <div className="font-raleway w-[95vw] px-5 mx-auto flex flex-col gap-24 mb-64">
-      <div className="w-full h-[65vh] flex items-center justify-center">
-        <h1 className="flex flex-col font-bold text-8xl sm:text-9xl">ABOUT</h1>
+    <div className='font-raleway w-[95vw] px-5 mx-auto flex flex-col gap-24 mb-64'>
+      <div className='w-full h-[65vh] flex items-center justify-center'>
+        <h1 className='flex flex-col font-bold text-8xl sm:text-9xl'>ABOUT</h1>
       </div>
 
-      <div className="space-y-6 max-w-[600px] mx-auto">
+      <div className='space-y-6 max-w-[600px] mx-auto'>
         <div>
-          <p className="font-bold text-3xl sm:text-2xl">
+          <p className='font-bold text-3xl sm:text-2xl'>
             Whats up, I&apos;m Keanu Aloua.
           </p>
-          <div className="text-xl font-semibold gap-2 sm:flex">
-            <p className="text-right">I&apos;m Filipino and Polynesian.</p>
+          <div className='text-xl font-semibold gap-2 sm:flex'>
+            <p className='text-right'>I&apos;m Filipino and Polynesian.</p>
             <p>Born and raised in Las Vegas, NV.</p>
           </div>
         </div>
-        <p className="text-lg">
+        <p className='text-lg'>
           My first time programming was in 7th grade when I was a graphic design
           major, creating a simple HTML/CSS website.
         </p>
 
-        <div className="space-y-1 md:text-lg">
-          <h2 className="text-xl font-semibold">The Detour</h2>
+        <div className='space-y-1 md:text-lg'>
+          <h2 className='text-xl font-semibold'>The Detour</h2>
           <p>
             In highschool, I took quite the detour and decided to major in
             Orchestra where I played Cello and Piano.
@@ -123,8 +131,8 @@ export default function About() {
           </p>
         </div>
 
-        <div className="space-y-1 md:text-lg">
-          <h2 className="text-xl font-semibold">Rediscovering Code</h2>
+        <div className='space-y-1 md:text-lg'>
+          <h2 className='text-xl font-semibold'>Rediscovering Code</h2>
           <p>
             My journey wasn&apos;t easy. After a rough first year struggling
             with C and C++, I switched my major to Political Science (which I
@@ -141,8 +149,8 @@ export default function About() {
           </p>
         </div>
 
-        <div className="space-y-1 md:text-lg">
-          <h2 className="text-xl font-semibold">Building with Purpose</h2>
+        <div className='space-y-1 md:text-lg'>
+          <h2 className='text-xl font-semibold'>Building with Purpose</h2>
           <p>
             This self-driven learning eventually led me to pursue real-world
             impact through tech.
@@ -157,79 +165,79 @@ export default function About() {
         </div>
       </div>
 
-      <div className="space-y-8">
-        <div className="flex items-center gap-2 md:gap-4">
-          <h3 className="md:text-lg">EDUCATION</h3>
-          <hr className="h-px w-full bg-white border-0" />
+      <div className='space-y-8'>
+        <div className='flex items-center gap-2 md:gap-4'>
+          <h3 className='md:text-lg'>EDUCATION</h3>
+          <hr className='h-px w-full bg-white border-0' />
         </div>
-        <ul className="space-y-8">
+        <ul className='space-y-8'>
           {education.map((edu, idx) => (
             <li key={idx}>
-              <h4 className="text-3xl font-bold tracking-tight md:text-4xl">
+              <h4 className='text-3xl font-bold tracking-tight md:text-4xl'>
                 {edu.university}
               </h4>
-              <div className="flex flex-col md:flex-row md:justify-between">
-                <p className="uppercase text-white/40">{edu.major}</p>
-                <p className="text-lg">{edu.term}</p>
+              <div className='flex flex-col md:flex-row md:justify-between'>
+                <p className='uppercase text-white/40'>{edu.major}</p>
+                <p className='text-lg'>{edu.term}</p>
               </div>
             </li>
           ))}
         </ul>
       </div>
 
-      <div className="space-y-8">
-        <div className="flex items-center gap-2 md:gap-4">
-          <h3 className="md:text-lg">WORK</h3>
-          <hr className="h-px w-full bg-white border-0" />
+      <div className='space-y-8'>
+        <div className='flex items-center gap-2 md:gap-4'>
+          <h3 className='md:text-lg'>WORK</h3>
+          <hr className='h-px w-full bg-white border-0' />
         </div>
-        <ul className="space-y-16">
+        <ul className='space-y-16'>
           {work.map((work, idx) => (
             <li
               key={idx}
-              className="flex flex-col space-y-2 justify-between md:grid md:grid-cols-3"
+              className='flex flex-col space-y-2 justify-between md:grid md:grid-cols-3'
             >
-              <p className="md:text-lg md:col-span-1">{work.from}</p>
-              <div className="col-span-2 space-y-4 md:col-span-2">
-                <div className="grid grid-cols-3 items-center gap-4 md:flex">
-                  <div className="bg-white p-3 rounded-lg w-[100px] h-[100px] flex justify-center items-center col-span-1">
+              <p className='md:text-lg md:col-span-1'>{work.from}</p>
+              <div className='col-span-2 space-y-4 md:col-span-2'>
+                <div className='grid grid-cols-3 items-center gap-4 md:flex'>
+                  <div className='bg-white p-3 rounded-lg w-[100px] h-[100px] flex justify-center items-center col-span-1'>
                     <Image
                       src={work.src}
                       alt={work.altText}
                       width={80}
                       height={80}
-                      className="object-contain"
+                      className='object-contain'
                     />
                   </div>
-                  <div className="col-span-2">
-                    <p className="text-2xl font-bold tracking-tight md:text-4xl">
+                  <div className='col-span-2'>
+                    <p className='text-2xl font-bold tracking-tight md:text-4xl'>
                       {work.company}
                     </p>
-                    <p className="text-sm md:text-base uppercase text-white/40">
+                    <p className='text-sm md:text-base uppercase text-white/40'>
                       {work.title}
                     </p>
                   </div>
                 </div>
-                <p className="md:text-lg">{work.desc}</p>
+                <p className='md:text-lg'>{work.desc}</p>
               </div>
             </li>
           ))}
         </ul>
       </div>
 
-      <div className="space-y-8">
-        <div className="flex items-center gap-2 md:gap-4">
-          <h3 className="md:text-lg">COMMUNITY</h3>
-          <hr className="h-px w-full bg-white border-0" />
+      <div className='space-y-8'>
+        <div className='flex items-center gap-2 md:gap-4'>
+          <h3 className='md:text-lg'>COMMUNITY</h3>
+          <hr className='h-px w-full bg-white border-0' />
         </div>
-        <ul className="space-y-8">
+        <ul className='space-y-8'>
           {community.map((leader, idx) => (
             <li key={idx}>
-              <h4 className="text-3xl font-bold tracking-tight md:text-4xl">
+              <h4 className='text-3xl font-bold tracking-tight md:text-4xl'>
                 {leader.organization}
               </h4>
-              <ul className="gap-12 md:flex md:flex-row">
+              <ul className='gap-12 md:flex md:flex-row'>
                 {leader.roles.map((role, roleIdx) => (
-                  <li key={roleIdx} className="uppercase text-white/40">
+                  <li key={roleIdx} className='uppercase text-white/40'>
                     {role}
                   </li>
                 ))}
