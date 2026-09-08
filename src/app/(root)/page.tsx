@@ -2,10 +2,20 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { MdKeyboardDoubleArrowDown } from 'react-icons/md';
 import { HiCode, HiLink } from 'react-icons/hi';
+
 import StaggerReelText from '@/components/ui/StaggerReelText';
 import { Project } from '@/types/project';
 
 const projects: Project[] = [
+  {
+    projectName: 'Kyyros',
+    year: 2026,
+    bgImage: '/',
+    techStack: ['TypeScript', 'React.js', 'Shadcn'],
+    desc: 'A video platform that allows users to comment on specific timestamps of videos that can be seen during playback',
+    github: 'https://github.com/keanu-a/kyyros',
+    link: 'https://www.kyyros.com/',
+  },
   {
     projectName: 'Lambda Psi Rho',
     year: 2025,
@@ -48,67 +58,67 @@ const projects: Project[] = [
     desc: 'Need help with moving? Hire someone easily. Need quick money? Become a mover!',
     github: 'https://github.com/Uber-for-Moving-Trucks/muver',
   },
-  {
-    projectName: 'Routine Tracker',
-    year: 2023,
-    bgImage: '/projects/routine-tracker.png',
-    techStack: ['TypeScript', 'React.js'],
-    desc: 'Track habits to create routines that you will never forget with reminders',
-    github: 'https://github.com/keanu-a/routine-tracker',
-    link: 'https://simple-routine-tracker.vercel.app/',
-  },
-  {
-    projectName: 'Omnifood',
-    year: 2022,
-    bgImage: '/projects/omnifood.png',
-    techStack: ['JavaScript'],
-    desc: 'An online course project that showed real world UI/UX and functionality to deliver a beautiful landing page',
-    github: 'https://github.com/keanu-a/web-dev/tree/main/Omnifood',
-    link: 'https://omnifood-keanu.netlify.app/',
-  },
+  // {
+  //   projectName: 'Routine Tracker',
+  //   year: 2023,
+  //   bgImage: '/projects/routine-tracker.png',
+  //   techStack: ['TypeScript', 'React.js'],
+  //   desc: 'Track habits to create routines that you will never forget with reminders',
+  //   github: 'https://github.com/keanu-a/routine-tracker',
+  //   link: 'https://simple-routine-tracker.vercel.app/',
+  // },
+  // {
+  //   projectName: 'Omnifood',
+  //   year: 2022,
+  //   bgImage: '/projects/omnifood.png',
+  //   techStack: ['JavaScript'],
+  //   desc: 'An online course project that showed real world UI/UX and functionality to deliver a beautiful landing page',
+  //   github: 'https://github.com/keanu-a/web-dev/tree/main/Omnifood',
+  //   link: 'https://omnifood-keanu.netlify.app/',
+  // },
 ];
 
 export default function Home() {
   return (
-    <div className="font-raleway w-full px-5 max-w-[600px] mx-auto flex flex-col gap-24">
-      <Image src="/him.webp" width={600} height={600} alt="Keanu" />
+    <div className='font-raleway w-full px-5 max-w-[600px] mx-auto flex flex-col gap-24'>
+      <Image src='/me.webp' width={600} height={600} alt='Keanu' />
 
       {/* SMALL ABOUT */}
-      <section className="flex flex-col gap-4">
-        <div className="flex flex-col gap-10 text-5xl font-bold md:text-7xl md:gap-12">
-          <p>24 YEARS OLD</p>
-          <p className="flex flex-col">
+      <section className='flex flex-col gap-4'>
+        <div className='flex flex-col gap-10 text-5xl font-bold md:text-7xl md:gap-12'>
+          <p>25 YEARS OLD</p>
+          <p className='flex flex-col'>
             <span>SOFTWARE</span>
-            <span className="text-right">ENGINEER</span>
+            <span className='text-right'>ENGINEER</span>
           </p>
 
-          <p className="flex flex-col">
+          <p className='flex flex-col'>
             <span>GRADUATED</span>
-            <span className="flex justify-between">
-              <span className="ml-12 md:ml-28">FROM</span>
+            <span className='flex justify-between'>
+              <span className='ml-12 md:ml-28'>FROM</span>
               <span>THE</span>
             </span>
-            <span className="flex flex-col">
+            <span className='flex flex-col'>
               <span>UNIVERSITY OF NEVADA,</span>
               <StaggerReelText
-                text="LAS VEGAS"
-                initialTextColor="text-white"
-                hoveredTextColor="text-red-500"
-                className="text-right"
+                text='LAS VEGAS'
+                initialTextColor='text-white'
+                hoveredTextColor='text-red-500'
+                className='text-right'
               />
             </span>
           </p>
-          <p className="flex flex-col">
-            <span className="w-full text-center">B.S. IN</span>
+          <p className='flex flex-col'>
+            <span className='w-full text-center'>B.S. IN</span>
             <span>COMPUTER</span>
-            <span className="text-right">SCIENCE</span>
+            <span className='text-right'>SCIENCE</span>
           </p>
-          <div className="space-y-2">
-            <p className="text-lg md:text-xl font-normal">
+          <div className='space-y-2'>
+            <p className='text-lg md:text-xl font-normal'>
               From the browser to the backend to the bits and bytes, I make it
               all work.
             </p>
-            <p className="text-lg md:text-xl font-normal">
+            <p className='text-lg md:text-xl font-normal'>
               I just want to create software that is impactful to people all
               over the world. My focus is in full stack development but always
               open to learn more.
@@ -121,19 +131,19 @@ export default function Home() {
 
       <section>
         {/* Medium screen size project display */}
-        <div className="flex-col gap-4 md:flex">
-          <ul className="flex flex-col gap-8">
+        <div className='flex-col gap-4 md:flex'>
+          <ul className='flex flex-col gap-8'>
             {projects.map((project, index) => (
               <li key={index}>
-                <h1 className="text-3xl font-bold uppercase">
+                <h1 className='text-3xl font-bold uppercase'>
                   {project.projectName}
                 </h1>
                 <p>{project.desc}</p>
-                <div className="flex gap-8 md:gap-4 py-2">
+                <div className='flex gap-8 md:gap-4 py-2'>
                   {project.link && (
                     <Link
                       href={project.link}
-                      className="transition-all hover:text-yellow-200"
+                      className='transition-all hover:text-yellow-200'
                     >
                       <HiLink size={20} />
                     </Link>
@@ -141,7 +151,7 @@ export default function Home() {
                   {project.github && (
                     <Link
                       href={project.github}
-                      className="transition-all hover:text-green-200"
+                      className='transition-all hover:text-green-200'
                     >
                       <HiCode size={20} />
                     </Link>
